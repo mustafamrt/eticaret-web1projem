@@ -23,7 +23,7 @@ import {
 import { GrFormSearch } from "react-icons/gr";
 import { FaUser } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
-import { FaLaptop, FaMobile, FaCamera, FaHeadphones, FaGamepad, FaPlug, FaHome ,FaCar, FaTree, FaTools, FaPencilAlt, FaBriefcase,  FaTshirt, FaShoppingBag, FaGlasses, FaHatWizard } from 'react-icons/fa';
+import { FaLaptop, FaMobile, FaCamera, FaHeadphones, FaGamepad, FaPlug, FaHome, FaCar, FaTree, FaTools, FaPencilAlt, FaBriefcase, FaTshirt, FaShoppingBag, FaGlasses, FaHatWizard } from 'react-icons/fa';
 import { GiSofa } from "react-icons/gi";
 
 import TrendBurada from "../../public/trendburada.svg";
@@ -38,17 +38,17 @@ const elektronikKategoriler = [
     {
         title: "Akıllı Telefonlar",
         description: "Mobil teknolojinin en son yeniliklerini keşfedin.",
-        icon: FaMobile ,
+        icon: FaMobile,
     },
     {
         title: "Kameralar",
         description: "Yüksek kaliteli görüntüleme cihazları ile anıları yakalayın.",
-        icon: FaCamera ,
+        icon: FaCamera,
     },
     {
         title: "Ses Cihazları",
         description: "Üstün ses kalitesi ile kendinizi bırakın.",
-        icon: FaHeadphones ,
+        icon: FaHeadphones,
     },
     {
         title: "Oyun Ekipmanları",
@@ -58,34 +58,34 @@ const elektronikKategoriler = [
     {
         title: "Aksesuarlar",
         description: "Cihazlarınızı tamamlayan mükemmel eklemeleri bulun.",
-        icon: FaPlug ,
+        icon: FaPlug,
     },
     {
         title: "Akıllı Ev",
         description: "Evini otomatikleştir ve kontrol etmek için akıllı cihazları kullan.",
-        icon: FaHome ,
+        icon: FaHome,
     },
 ];
 const evkrtsyeKatalog = [
     {
         title: "Ev",
         description: "Ev ihtiyaçlarınız için mükemmel çözümler.",
-        icon: FaHome ,
+        icon: FaHome,
     },
     {
         title: "Yaşam",
         description: "Hayatınızı kolaylaştıracak ürünler ve hizmetler.",
-        icon: GiSofa ,
+        icon: GiSofa,
     },
     {
         title: "Kırtasiye",
         description: "Ofis ve okul malzemeleriyle üretkenliğinizi artırın.",
-        icon: FaPencilAlt ,
+        icon: FaPencilAlt,
     },
     {
         title: "Ofis",
         description: "Ofis ihtiyaçlarınız için şık ve etkili çözümler.",
-        icon: FaBriefcase ,
+        icon: FaBriefcase,
     },
 ];
 
@@ -93,22 +93,22 @@ const modaKategorileri = [
     {
         title: "Giyim",
         description: "Son moda kıyafet ve aksesuarları keşfedin.",
-        icon: FaTshirt ,
+        icon: FaTshirt,
     },
     {
         title: "Aksesuarlar",
         description: "Tarzınızı tamamlayacak şık aksesuarlar.",
-        icon: FaGlasses ,
+        icon: FaGlasses,
     },
     {
         title: "Çanta",
         description: "Şıklığınızı taşıyın, pratik ve şık çanta modelleri.",
-        icon: FaShoppingBag ,
+        icon: FaShoppingBag,
     },
     {
         title: "Şapka",
         description: "Tarzınıza uygun şapka modelleri.",
-        icon: FaHatWizard ,
+        icon: FaHatWizard,
     },
 ];
 
@@ -130,7 +130,7 @@ const otoBahceYapiMarketKategorileri = [
     },
 ];
 
-function NavListMenu({title , data}) {
+function NavListMenu({ title, data }) {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
@@ -228,7 +228,7 @@ function NavListHesap() {
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
-                            <FaUser size={20}/>
+                            <FaUser size={20} />
                             Giriş Yap
 
                         </ListItem>
@@ -254,11 +254,11 @@ function NavList() {
 
 
             <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
-                <NavListMenu title={"Elektronik"} data={elektronikKategoriler}/>
+                <NavListMenu title={"Elektronik"} data={elektronikKategoriler} />
                 <NavListMenu title={"Moda"} data={modaKategorileri} />
-                <NavListMenu title={"Ev, Yaşam, Kırtasiye, Ofis"} data={evkrtsyeKatalog}  />
+                <NavListMenu title={"Ev, Yaşam, Kırtasiye, Ofis"} data={evkrtsyeKatalog} />
                 <NavListMenu title={"Oto, Bahçe, Yapı Market"} data={otoBahceYapiMarketKategorileri} />
-                <Link  className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900 ">Çok Satanlar</Link>
+                <Link className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900 ">Çok Satanlar</Link>
             </List>
 
         </>
@@ -267,10 +267,10 @@ function NavList() {
 
 function sepetCount() {
 
-    if(localStorage.getItem("sepet") == null) {
-        localStorage.setItem("sepet",[]);
+    if (localStorage.getItem("sepet") == null) {
+        localStorage.setItem("sepet", []);
         return 0;
-    }else{
+    } else {
         return (localStorage.getItem("sepet").length);
     }
 }
@@ -291,12 +291,12 @@ export function NavbarCompanent() {
 
     return (
         <Navbar className="mx-auto  max-w-screen-full py-2 ">
-        <div className="flex flex-col items-end">
-            <div className="space-x-2">
-                <Link className="text-[#999] text-[13px]">Yardım & Destek</Link>
-                <Link className="text-[#999] text-[13px]">Hakkımızda</Link>
+            <div className="flex flex-col items-end">
+                <div className="space-x-2">
+                    <Link className="text-[#999] text-[13px]">Yardım & Destek</Link>
+                    <Link className="text-[#999] text-[13px]">Hakkımızda</Link>
+                </div>
             </div>
-        </div>
 
             <div className="flex items-center justify-between text-blue-gray-900">
                 <Typography
@@ -336,11 +336,11 @@ export function NavbarCompanent() {
                     <NavListHesap />
                     <Link to={"/"} className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
                     >
-                        <Badge content={sepetCount()}><FaCartShopping size={20}/></Badge>
+                        <Badge content={sepetCount()}><FaCartShopping size={20} /></Badge>
                         Sepetim
                     </Link>
 
-                        
+
                 </div>
                 <IconButton
                     variant="text"
@@ -361,13 +361,13 @@ export function NavbarCompanent() {
             <Collapse open={openNav}>
                 <NavList />
                 <div>
-                        <Button className="bg-[#FF6000]" >Giriş Yap</Button>
-        
-                        <Button className="ml-5">Üye Ol</Button>
-                    </div>  
-                    <Link to={"/"} className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
-                    ><FaCartShopping />
-                        Sepetim</Link>
+                    <Button className="bg-[#FF6000]" >Giriş Yap</Button>
+
+                    <Button className="ml-5">Üye Ol</Button>
+                </div>
+                <Link to={"/"} className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+                ><FaCartShopping />
+                    Sepetim</Link>
             </Collapse>
         </Navbar>
     );
