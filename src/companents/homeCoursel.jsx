@@ -17,8 +17,8 @@ function HomeCoursel() {
                     <p className="font-bold pt-4">fırsatlar geldi</p>
                     <Button className="mt-[25%]">Alışverişe Başla</Button>
                 </div>
-                <div class="w-2/3 p-4">
-                    <img src="https://images.hepsiburada.net/banners/s/0/672-378/bannerImage2130_20231208181518.jpeg" className="rounded-xl" />
+                <div class="w-2/3 p-4 ">
+                    <img src="https://images.hepsiburada.net/banners/s/0/672-378/bannerImage2130_20231208181518.jpeg" className="rounded-xl m-auto" />
                 </div>
             </div>
             </div>

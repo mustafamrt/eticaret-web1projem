@@ -1,4 +1,4 @@
-import React from "react";
+import React,  { useMemo } from "react";
 import {
     Navbar,
     Collapse,
@@ -131,12 +131,12 @@ const otoBahceYapiMarketKategorileri = [
 ];
 
 function NavListMenu({ title, data }) {
+    const memoizedData = useMemo(() => data, [data]);
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-
-    const renderItems = data.map(
-        ({ icon, title, description }, key) => (
-            <a href="#" key={key}>
+  
+    const renderItems = memoizedData.map(({ icon, title, description }, key) => (
+      <a href="#" key={key}>
                 <MenuItem className="flex items-center gap-3 rounded-lg">
                     <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
                         {" "}
