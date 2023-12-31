@@ -5,3 +5,35 @@
 .max-w-screen-2xl{
   max-width: 100% !important;
 }
+
+/* src/components/ProductCarousel.css */
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrow:hover {
+  color: #007bff; /* Mouse üzerine gelince renk değişimi */
+}
