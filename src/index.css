@@ -7,12 +7,27 @@
 }
 
 /* HomeProductCarousel.css */
-
-.slick-slider {
-  display: flex;
-  justify-content: center;
+.list-wrapper {
+  overflow: hidden;
+  position: relative;
 }
-
-.carousel-item {
-  margin: 0 auto; /* Bu, carousel içindeki her öğeyi yatayda ortalar */
+.product-list {
+  list-style: none;
+  padding: 0;
+  height: 320px;
+  display:flex;
+  align-items:center;
+  column-gap: 25px;
+  transform: translateX(0);
+  transition: 0.7s all ease-in-out;
+}
+.product-item {
+  position: relative;
+}
+.product-item-img {
+  width: 200px;
+  height: 190px;
+  object-fit: initial;
+  border-radius: 2px;
+  transition: 0.5s all ease-in-out;
 }

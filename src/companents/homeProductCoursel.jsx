@@ -16,16 +16,17 @@ function HomeProductCoursel({ data }) {
           {
             data.map((item,index) => {
                 return(
+                    
                     <div className="flex-none w-64  rounded-md overflow-hidden">
                     <div key={index} className="carousel-item">
                         <div class="justify-center  flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56">
                             <div class="p-6 text-center">
-                                <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                                <h5 class="block mb-2 font-sans sm:text-xl text-md antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                     {item.name}
                                 </h5>
                             </div>
                             <div
-                                class="relative max-h-56 mx-4 -mt-6 overflow-hidden text-white  ">
+                                class="relative max-h-48 mx-4 -mt-6 overflow-hidden text-white  ">
                                 <img
                                     src={item.image}
                                     alt="card-image"
@@ -33,7 +34,7 @@ function HomeProductCoursel({ data }) {
                             </div>
 
                             <div class="p-6 text-center font-bold">
-                                <span className='text-2xl'>{item.price}</span> <span className='text-sm'>TL</span>
+                                <span className='sm:text-2xl text-xl'>{item.price}</span> <span className='text-sm'>TL</span>
                             </div>
                         </div>
                     </div>
