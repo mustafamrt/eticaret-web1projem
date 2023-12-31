@@ -15,7 +15,7 @@ function HomeCourselTemplate({ img, title, desc, button, onSelectHandel, onStopH
                 }}
             >
                 <div className="py-12 shadow-xl">
-                    <div className="md:flex md:mx-5 mx-0 bg-white">
+                    <div className="md:flex md:mx-5 mx-0 border border-2xl " style={{backdropFilter: "blur(50px)"}}>
                         <div className="md:w-2/3 p-4 sm:w-full sm:block">
                             <img src={img} className="rounded-xl m-auto" />
                         </div>
