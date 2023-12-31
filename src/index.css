@@ -6,34 +6,13 @@
   max-width: 100% !important;
 }
 
-/* src/components/ProductCarousel.css */
-.carousel-container {
-  overflow: hidden;
-  position: relative;
-}
+/* HomeProductCarousel.css */
 
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #333;
-  transition: color 0.3s ease-in-out;
-}
-
-.arrow.left {
-  left: 10px;
-}
-
-.arrow.right {
-  right: 10px;
-}
-
-.carousel-content {
+.slick-slider {
   display: flex;
-  transition: transform 0.3s ease-in-out;
+  justify-content: center;
 }
 
-.arrow:hover {
-  color: #007bff; /* Mouse üzerine gelince renk değişimi */
+.carousel-item {
+  margin: 0 auto; /* Bu, carousel içindeki her öğeyi yatayda ortalar */
 }

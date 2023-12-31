@@ -20,6 +20,8 @@ import {
     XMarkIcon,
 } from "@heroicons/react/24/outline";
 
+import Fisherman from "../../public/Fisherman.webp"
+
 import { GrFormSearch } from "react-icons/gr";
 import { FaUser } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
@@ -228,7 +230,7 @@ function NavListHesap() {
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
-                            <FaUser size={20} />
+                           <img src={Fisherman}  width={25} height={30}/>
                             Giriş Yap
 
                         </ListItem>
