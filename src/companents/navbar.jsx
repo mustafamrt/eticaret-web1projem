@@ -228,7 +228,7 @@ function NavListHesap() {
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
-                            <FaUser />
+                            <FaUser size={20}/>
                             Giriş Yap
 
                         </ListItem>
@@ -336,8 +336,8 @@ export function NavbarCompanent() {
                     <NavListHesap />
                     <Link to={"/"} className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
                     >
-                        <Badge content={sepetCount()}><FaCartShopping />
-                        Sepetim</Badge>
+                        <Badge content={sepetCount()}><FaCartShopping size={20}/></Badge>
+                        Sepetim
                     </Link>
 
                         
