@@ -1,53 +1,73 @@
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-
-function HomeProductCoursel({ data }) {
+function HomeProductCarousel({ data }) {
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 6, // Adjust as needed
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        responsive: [
+            {
+                breakpoint: 1500,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ]
+    };
 
     return (
-
-        <div className="relative carousel-container">
-
-  
-        <div className="flex space-x-4 overflow-x-auto p-4 carousel-content" >
-          {/* Örnek ürün kartları */}
-
-  
-          {
-            data.map((item,index) => {
-                return(
-                    
-                    <div className="flex-none w-64  rounded-md overflow-hidden">
-                    <div key={index} className="carousel-item">
-                        <div class="justify-center  flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56">
-                            <div class="p-6 text-center">
-                                <h5 class="block mb-2 font-sans sm:text-xl text-md antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+        <div className=' px-12'>
+            <Slider {...settings}>
+                {data.map((item, index) => (
+                    <div key={index} className="carousel-item  px-4 ">
+                        <div className="border border-[#00000059] justify-center flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl">
+                            <div className="p-6 text-center">
+                                <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                                     {item.name}
                                 </h5>
                             </div>
                             <div
-                                class="relative max-h-48 mx-4 -mt-6 overflow-hidden text-white  ">
+                                className="relative max-h-56 mx-4 -mt-6 overflow-hidden text-white">
                                 <img
                                     src={item.image}
                                     alt="card-image"
                                     className='shadow-lg bg-clip-border rounded-xl  shadow-blue-gray-500/40' />
                             </div>
 
-                            <div class="p-6 text-center font-bold">
-                                <span className='sm:text-2xl text-xl'>{item.price}</span> <span className='text-sm'>TL</span>
+                            <div className="p-6 text-center font-bold">
+                                <span className='text-2xl'>{item.price}</span> <span className='text-sm'>TL</span>
                             </div>
                         </div>
                     </div>
-              </div>
-                )
-            })
-          }
-  
-          {/* Daha fazla ürün kartı eklenebilir */}
+                ))}
+            </Slider>
         </div>
-      </div>
-    )
-
+    );
 }
 
-export default HomeProductCoursel;
+export default HomeProductCarousel;

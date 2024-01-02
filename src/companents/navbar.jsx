@@ -1,4 +1,4 @@
-import React,  { useMemo } from "react";
+import React, { useMemo } from "react";
 import {
     Navbar,
     Collapse,
@@ -20,7 +20,6 @@ import {
     XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-import Fisherman from "../../public/Fisherman.webp"
 
 import { GrFormSearch } from "react-icons/gr";
 import { FaUser } from "react-icons/fa";
@@ -136,35 +135,35 @@ function NavListMenu({ title, data }) {
     const memoizedData = useMemo(() => data, [data]);
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-  
+
     const renderItems = memoizedData.map(({ icon, title, description }, key) => (
-      <a href="#" key={key}>
-                <MenuItem className="flex items-center gap-3 rounded-lg">
-                    <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
-                        {" "}
-                        {React.createElement(icon, {
-                            strokeWidth: 2,
-                            className: "h-6 text-gray-900 w-6",
-                        })}
-                    </div>
-                    <div>
-                        <Typography
-                            variant="h6"
-                            color="blue-gray"
-                            className="flex items-center text-sm font-bold"
-                        >
-                            {title}
-                        </Typography>
-                        <Typography
-                            variant="paragraph"
-                            className="text-xs !font-medium text-blue-gray-500"
-                        >
-                            {description}
-                        </Typography>
-                    </div>
-                </MenuItem>
-            </a>
-        ),
+        <a href="#" key={key}>
+            <MenuItem className="flex items-center gap-3 rounded-lg">
+                <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
+                    {" "}
+                    {React.createElement(icon, {
+                        strokeWidth: 2,
+                        className: "h-6 text-gray-900 w-6",
+                    })}
+                </div>
+                <div>
+                    <Typography
+                        variant="h6"
+                        color="blue-gray"
+                        className="flex items-center text-sm font-bold"
+                    >
+                        {title}
+                    </Typography>
+                    <Typography
+                        variant="paragraph"
+                        className="text-xs !font-medium text-blue-gray-500"
+                    >
+                        {description}
+                    </Typography>
+                </div>
+            </MenuItem>
+        </a>
+    ),
     );
 
     return (
@@ -230,18 +229,20 @@ function NavListHesap() {
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
-                           <img src={Fisherman}  width={25} height={30}/>
+                            <FaUser size={20} />
                             Giriş Yap
 
                         </ListItem>
                     </Typography>
                 </MenuHandler>
                 <MenuList className="hidden max-w-screen-xl rounded-xl lg:block text-center">
-                    <div>
-                        <Button className="bg-[#FF6000]">Giriş Yap</Button>
-                    </div>
-                    <div className="mt-5">
-                        <Button >Üye Ol</Button>
+                    <div className="grid grid-cols-2">
+                        <div>
+                            <Link to={"/login" }><Button className="bg-[#FF6000]">Giriş Yap</Button></Link>
+                        </div>
+                        <div >
+                            <Link to={"/register"}> <Button >Üye Ol</Button></Link>
+                        </div>
                     </div>
                 </MenuList>
             </Menu>
@@ -295,15 +296,15 @@ export function NavbarCompanent() {
         <Navbar className="mx-auto  max-w-screen-full py-2 ">
             <div className="flex flex-col items-end">
                 <div className="space-x-2">
-                    <Link className="text-[#999] text-[13px]">Yardım & Destek</Link>
-                    <Link className="text-[#999] text-[13px]">Hakkımızda</Link>
+                    <Link to={"/yardim"} className="text-[#999] text-[13px]">Yardım & Destek</Link>
+                    <Link to={"/hakkimizda"} className="text-[#999] text-[13px]">Hakkımızda</Link>
                 </div>
             </div>
 
             <div className="flex items-center justify-between text-blue-gray-900">
                 <Typography
                     as="a"
-                    href="#"
+                    href="/"
                     variant="h6"
                     className="mr-4 cursor-pointer py-1.5 lg:ml-2"
                 >
@@ -363,9 +364,9 @@ export function NavbarCompanent() {
             <Collapse open={openNav}>
                 <NavList />
                 <div>
-                    <Button className="bg-[#FF6000]" >Giriş Yap</Button>
+                    <Link to={"/login"} className="bg-[#FF6000]" ><Button className="bg-[#FF6000]">Giriş Yap</Button></Link>
 
-                    <Button className="ml-5">Üye Ol</Button>
+                    <Link to={"/register"} className="ml-5"><Button>Üye Ol</Button></Link>
                 </div>
                 <Link to={"/"} className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
                 ><FaCartShopping />
