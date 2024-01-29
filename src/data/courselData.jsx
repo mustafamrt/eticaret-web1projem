@@ -4,14 +4,14 @@ const CourselData = [
         desc: "çok süper fırsatlar",
         button: "Alışverişe başla",
         buttonColor: "c9001f",
-        img: "https://images.hepsiburada.net/banners/s/0/672-378/bannerImage2125_20231023121055.png"
+        img: "https://images.hepsiburada.net/banners/s/0/672-378/bannerImage2108_20240129081159.png"
     },
     {
         text: "Yeni yıl gelmeden",
         desc: "fırsatlar geldi",
         button: "Alışverişe başla",
         buttonColor: "ff6000",
-        img: "https://images.hepsiburada.net/banners/s/0/672-378/bannerImage2130_20231208181518.jpeg"
+        img: "https://images.hepsiburada.net/banners/s/0/672-378/bannerImage2075_20240122171022.jpeg"
     },
     {
         text: "Bu İndirim şimdi var",
