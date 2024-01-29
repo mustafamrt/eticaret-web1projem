@@ -1,7 +1,7 @@
 const KampanyaData  = [
     {
         text: "Deprem bölgelerine <br> <b>destek olabilirsiniz</b>",
-        image: "https://images.hepsiburada.net/banners/s/0/227-403/marketingbillboard_20230221215933.jpeg"
+        image: "https://images.hepsiburada.net/banners/s/0/224-371/homepageImage2106_20231201093548.png"
     },
     {
         text: "Kolay <b>yolculuk</b>",
